@@ -13,7 +13,7 @@ for(int i = 1; i < 5; i++)
 }
 
 // Cria a suíte
-Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
+Suite suite = new Suite(tipoSuite: "Premium", capacidade: 4, valorDiaria: 30);
 
 // Cria uma nova reserva, passando a suíte e os hóspedes
 //Cadastrando hóspedes 1 e 2 na primeira reserva
@@ -24,7 +24,7 @@ reserva1.CadastrarHospedes(new List<Pessoa>() {hospedes[0], hospedes[1]});
 //Cadastrando hóspedes 2, 3 e 4 na segunda reserva
 Reserva reserva2 = new Reserva(diasReservados: 4);
 reserva2.CadastrarSuite(suite);
-reserva2.CadastrarHospedes(new List<Pessoa>() {hospedes[2], hospedes[3], hospedes[4]});
+reserva2.CadastrarHospedes(new List<Pessoa>() {hospedes[1], hospedes[2], hospedes[3]});
 
 //Adicionando as reservas na lista
 reservas.Add(reserva1);
