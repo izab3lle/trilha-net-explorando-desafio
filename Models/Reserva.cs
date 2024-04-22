@@ -50,5 +50,22 @@ namespace DesafioProjetoHospedagem.Models
 
             return valor;
         }
+    
+        public void ListarHospedes()
+        {
+            foreach(Pessoa hospede in Hospedes)
+            {
+                Console.WriteLine(hospede.NomeCompleto);
+            }
+        }
+
+        public void ImprimirReserva()
+        {
+            Console.WriteLine("\n");
+            Console.WriteLine($"Hóspedes: {ObterQuantidadeHospedes()}");
+            ListarHospedes();
+            Console.WriteLine($"Tipo de suíte: {Suite.TipoSuite}");
+            Console.WriteLine($"Valor diária: {CalcularValorDiaria():C2}");
+        }
     }
 }
